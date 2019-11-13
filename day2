@@ -173,8 +173,9 @@ select s_id,group_concat(f_name)as name from fruits group by s_id;
 -- 根据s_id对fruits表中的数据进行分组，并显示水果种类大于1的分组信息
 select s_id,group_coucat(f_name) as names form fruits group by s_id having count(f_name) >1;
 -- 根据s_id对fruits表中的数据进行分组，并显示记录数量
-
+select s_id,count(*) as total from fruits group by s_id;
 -- 根据s_id和f_name字段对fruits表中的数据进行分组， SQL语句如下，
+select s_id,f_name,count(*) as total from fruits group by s_id,f_name;
 
 CREATE TABLE orderitems
 (
